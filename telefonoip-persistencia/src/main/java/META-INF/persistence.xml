@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+	<persistence-unit name="telefonoip-persistencia" transaction-type="RESOURCE_LOCAL">
+	<!--  Clases Bean que son el modelo de las tablas -->
+	<class>com.jmdomingueza.telefonoip.persistencia.entities.CountDummyDataImpl</class>
+	<class>com.jmdomingueza.telefonoip.persistencia.entities.CountSipDataImpl</class>
+	<class>com.jmdomingueza.telefonoip.persistencia.entities.CountSipDataPKImpl</class>
+	<class>com.jmdomingueza.telefonoip.persistencia.entities.HistoryCountDummyDataImpl</class>
+	<class>com.jmdomingueza.telefonoip.persistencia.entities.HistoryCountSipDataImpl</class>
+	<class>com.jmdomingueza.telefonoip.persistencia.entities.HistoryCallDummyDataImpl</class>
+	<class>com.jmdomingueza.telefonoip.persistencia.entities.HistoryCallSipDataImpl</class>
+	
+	<!--  Propiedades de la conexion con la BBDD -->
+	<properties>
+			<property name="javax.persistence.jdbc.driver"
+				value="com.mysql.jdbc.Driver"/>
+			<property name="javax.persistence.jdbc.url"
+				value="jdbc:mysql://localhost:3306/telefonoipss"/>
+			<property name="javax.persistence.jdbc.user" 
+				value="root"/>
+			<property name="javax.persistence.jdbc.password" 
+				value="admin"/>
+			<property name="javax.persistence.validation.mode"
+				value="none"/>
+			<property name="hibernate.show_sql"
+				value="true"/>
+			<property name="hibernate.format_sql"
+				value="true"/>
+		</properties>
+	</persistence-unit>
+</persistence>
